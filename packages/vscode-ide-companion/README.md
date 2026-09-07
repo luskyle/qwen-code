@@ -1,9 +1,9 @@
-# Qwen Code Companion
+# Qwen Code Companion (personal fork)
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/qwenlm.qwen-code-vscode-ide-companion)](https://marketplace.visualstudio.com/items?itemName=qwenlm.qwen-code-vscode-ide-companion)
-[![VS Code Installs](https://img.shields.io/visual-studio-marketplace/i/qwenlm.qwen-code-vscode-ide-companion)](https://marketplace.visualstudio.com/items?itemName=qwenlm.qwen-code-vscode-ide-companion)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/qwenlm/qwen-code-vscode-ide-companion)](https://open-vsx.org/extension/qwenlm/qwen-code-vscode-ide-companion)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/qwenlm.qwen-code-vscode-ide-companion)](https://marketplace.visualstudio.com/items?itemName=qwenlm.qwen-code-vscode-ide-companion)
+> [!NOTE]
+> This is a **personal fork** of [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) maintained by [luskyle](https://github.com/luskyle). The extension source lives in `packages/vscode-ide-companion`. This fork is **not published** to the VS Code Marketplace or Open VSX — build it from source as described below, or use the [official release](https://marketplace.visualstudio.com/items?itemName=qwenlm.qwen-code-vscode-ide-companion) from upstream.
+
+[![Fork](https://img.shields.io/badge/fork-luskyle%2Fqwen--code-181717?logo=github)](https://github.com/luskyle/qwen-code)
 
 Seamlessly integrate [Qwen Code](https://github.com/QwenLM/qwen-code) into Visual Studio Code with native IDE features and an intuitive chat interface. This extension bundles everything you need — no additional installation required.
 
@@ -29,13 +29,23 @@ Seamlessly integrate [Qwen Code](https://github.com/QwenLM/qwen-code) into Visua
 
 ## Quick Start
 
-1. **Install** from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=qwenlm.qwen-code-vscode-ide-companion) or [Open VSX Registry](https://open-vsx.org/extension/qwenlm/qwen-code-vscode-ide-companion)
+1. **Build from source** (this fork is not published to a registry):
 
-2. **Open the Chat panel** using one of these methods:
+   ```bash
+   git clone https://github.com/luskyle/qwen-code.git
+   cd qwen-code/packages/vscode-ide-companion
+   npm install
+   npm run package   # produces qwen-code-vscode-ide-companion-*.vsix
+   ```
+
+2. **Install the VSIX** — in VS Code, run `Extensions: Install from VSIX...` and pick the generated `.vsix` file.
+
+3. **Open the Chat panel** using one of these methods:
+
    - Click the **Qwen icon** in the top-right corner of the editor
    - Run `Qwen Code: Open` from the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`)
 
-3. **Start chatting** — Ask Qwen to help with coding tasks, explain code, fix bugs, or write new features
+4. **Start chatting** — Ask Qwen to help with coding tasks, explain code, fix bugs, or write new features
 
 ## Commands
 
@@ -48,8 +58,8 @@ Seamlessly integrate [Qwen Code](https://github.com/QwenLM/qwen-code) into Visua
 
 ## Feedback & Issues
 
-- 🐛 [Report bugs](https://github.com/QwenLM/qwen-code/issues/new?template=bug_report.yml&labels=bug,vscode-ide-companion)
-- 💡 [Request features](https://github.com/QwenLM/qwen-code/issues/new?template=feature_request.yml&labels=enhancement,vscode-ide-companion)
+- 🐛 Fork-specific issues: [luskyle/qwen-code issues](https://github.com/luskyle/qwen-code/issues)
+- 💡 Feature bugs & requests: please report to the upstream project — [QwenLM/qwen-code issues](https://github.com/QwenLM/qwen-code/issues/new?template=bug_report.yml&labels=bug,vscode-ide-companion)
 - 📖 [Documentation](https://qwenlm.github.io/qwen-code-docs/)
 - 📋 [Changelog](https://github.com/QwenLM/qwen-code/releases)
 
